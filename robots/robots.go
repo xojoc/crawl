@@ -20,7 +20,7 @@ type Txt struct {
 	Sitemaps []string
 }
 
-// Allowed returns true if ua can access path.
+// Allowed returns true if user agent ua can access path.
 // False otherwise.
 func (t *Txt) Allowed(ua string, path string) bool {
 	allowed := true
@@ -52,7 +52,7 @@ func (t *Txt) Allowed(ua string, path string) bool {
 	return allowed
 }
 
-// Delay returns the number of seconds between successive accesses to
+// Delay returns the number of seconds to wait between successive accesses to
 // the same host.
 // Returns 0 if no delay is specified.
 func (t *Txt) Delay(ua string) int {

@@ -21,7 +21,7 @@ See [godoc](https://godoc.org/xojoc.pw/crawl/robots) for the complete documentat
 
  * Great and stable API
  * Lots of tests and [quicktesting](https://golang.org/pkg/testing/quick/)!
- * [Good documentation](https://godoc.org/xojoc.pw/robots/crawl) with lots of examples.
+ * [Good documentation](https://godoc.org/xojoc.pw/crawl/robots) with lots of examples.
 
 # Who?
 *robots* was written by Alexandru Cojocaru (https://xojoc.pw).
