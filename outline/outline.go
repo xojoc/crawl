@@ -14,7 +14,7 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
 // Package outline extracts information from html pages.
-package outline
+package outline // import "xojoc.pw/crawl/outline"
 
 // TODO: simple dump and nav tool for the web
 // TODO: detect kind of document (article, index, blog index, home page, tool)
@@ -70,12 +70,6 @@ func isMain(n *html.Node) bool {
 		case "main", "content":
 			return true
 		}
-		/*
-			switch attribute(n, "class") {
-			case "section-content":
-				return true
-			}
-		*/
 	}
 	if n.Attr("role") == "main" {
 		return true
@@ -141,6 +135,7 @@ func buildBody(n *html.Node, o *Outline) {
 		n = n.NextSibling()
 	}
 }
+
 func isArticle(n *html.Node) bool {
 	if n.IsElement("article") {
 		return true
@@ -153,6 +148,7 @@ func isArticle(n *html.Node) bool {
 	}
 	return false
 }
+
 func buildMain(n *html.Node, o *Outline) {
 	n = n.FirstChild()
 	var stack []*html.Node

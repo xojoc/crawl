@@ -278,6 +278,7 @@ func (n *Node) Parent() *Node {
 	}
 	return &Node{node: n.node.Parent}
 }
+
 func (n *Node) ParentElement() *Node {
 	if n == nil {
 		return nil
